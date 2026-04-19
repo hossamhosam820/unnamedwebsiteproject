@@ -1,4 +1,4 @@
-package com.elhackarz.fehu2026.Models;
+package com.elhackarz.fehu2026.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -7,7 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class lectures {
+public class Lectures {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,7 +21,8 @@ public class lectures {
     @Column(nullable = false, length = 200, unique = true)
     private String url;
 
-    public lectures() {
+    public Lectures() {
+        // dont need to implement
     }
 
     public long getId() {
