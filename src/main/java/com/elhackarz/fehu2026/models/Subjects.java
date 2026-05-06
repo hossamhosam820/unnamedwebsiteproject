@@ -21,7 +21,7 @@ public class Subjects {
     @Column(nullable = false, length = 20, unique = false)
     private String instructor;
 
-    public Subjects() {
+    public Subjects(Subjects subject, int count) {
         // dont need to implement
     }
 
