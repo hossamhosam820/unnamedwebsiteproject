@@ -82,6 +82,10 @@ dialog[open] {
   flex-wrap: wrap;
 }
 
+.container a {
+  text-decoration: none;
+}
+
 .card {
   min-width: 300px;
   background-color: #333;
