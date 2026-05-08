@@ -1,7 +1,7 @@
 package com.elhackarz.fehu2026.controller;
+
 import java.util.List;
 import java.util.stream.Collectors;
-
 
 import com.elhackarz.fehu2026.models.Subjects;
 import com.elhackarz.fehu2026.repositories.LecturesRepo;
@@ -26,7 +26,7 @@ public class SubjectsCounts {
         return subjects.stream()
                 .map(subject -> {
                     int count = lecturesrepo.countBySubject(subject.getName());
-                    return new Subjects(subject, count);
+                    return new Subjects();
                 })
                 .collect(Collectors.toList());
     }

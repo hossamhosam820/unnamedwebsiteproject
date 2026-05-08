@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Secure Access</title>
+    <link href="css/login.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2>UniRoom</h2>
+        <h4 id="usederror">This account already exists</h4>
+        <form action="/api/auth/signup" method="POST">
+            <div class="form-item">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="enter your email" required>
+            </div>
+            <div class="form-item">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="enter your full name" required>
+            </div>
+            <div class="form-item">
+                <label for="username">Username</label>
+                <input type="username" id="username" name="username" placeholder="enter your username" required>
+            </div>
+            <div class="form-item">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="enter your password" required>
+            </div>
+            <button type="submit" class="login-btn">Signup</button>
+        </form>
+    </div>
+
+</body>
+<script>const isok = new URLSearchParams(window.location.search).has('USED'); if (isok) {
+        document.getElementById("usederror").style.display = "";
+    }
+    else {
+        document.getElementById("usederror").style.display = "none";
+    }
+</script>
+
+</html>
