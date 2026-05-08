@@ -1,5 +1,4 @@
 package com.elhackarz.fehu2026;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
