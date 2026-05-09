@@ -20,7 +20,6 @@ public class User {
     private String name;
     private String username;
     private Double gpa;
-    private Integer acyear;
     private LocalDate birthDate;
     @Column(unique = true)
     private String email;
