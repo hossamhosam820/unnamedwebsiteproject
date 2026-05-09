@@ -24,8 +24,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(
                         auth -> auth
                                 .requestMatchers("/login.html", "/css/login.css", "/signup.html",
-                                        "/css/signup.css", "/signup", "/login", "/api/hello",
-                                        "/api/auth/signup", "/api/auth/login", "/api/auth/logout")
+                                        "/css/signup.css", "/signup", "/login",
+                                        "/api/auth/signup", "/api/auth/login")
                                 .permitAll()
                                 .anyRequest().authenticated())
                 .formLogin(login -> login.loginPage("/login").loginProcessingUrl("/api/auth/login")
