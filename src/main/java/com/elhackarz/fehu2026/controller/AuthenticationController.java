@@ -70,7 +70,6 @@ public class AuthenticationController {
         }
         User user = new User();
         user.setName(signupRequest.getName());
-        user.setAcyear(signupRequest.getAcyear());
         user.setGpa(signupRequest.getGpa());
         user.setEmail(signupRequest.getEmail());
         user.setPassword(passwordEncoder.encode(signupRequest.getPassword()));
