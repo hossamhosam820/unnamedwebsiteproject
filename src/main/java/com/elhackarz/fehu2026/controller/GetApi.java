@@ -49,7 +49,7 @@ public class GetApi {
     @PostMapping("/addsubject")
     public RedirectView addSubject(@ModelAttribute Subjects subject) {
         subjectsrepo.save(subject);
-        return new RedirectView("/home?subject");
+        return new RedirectView("/home?material");
     }
 
     @PostMapping("/addlecture")

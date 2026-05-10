@@ -12,7 +12,7 @@ async function fetchanddisplaysubjects() {
         subject_card.className = "card";
         const subject_img = document.createElement("img");
         subject_img.src = subject.imagepath;
-        const subject_text = document.createElement("h6");
+        const subject_text = document.createElement("h3");
         subject_text.textContent = subject.name;
         container.appendChild(subject_link);
         subject_link.appendChild(subject_card);
@@ -66,7 +66,7 @@ async function fetchanddisplaylectures() {
         lecture_card.className = "card";
         const lecture_img = document.createElement("img");
         lecture_img.src = lecture.imagepath;
-        const lecture_text = document.createElement("h6");
+        const lecture_text = document.createElement("h3");
         lecture_text.textContent = lecture.name;
         container.appendChild(lecture_link);
         lecture_link.appendChild(lecture_card);
@@ -160,7 +160,7 @@ async function fetchanddisplayexams() {
         subject_card.className = "card";
         const subject_img = document.createElement("img");
         subject_img.src = subject.imagepath;
-        const subject_text = document.createElement("h6");
+        const subject_text = document.createElement("h3");
         subject_text.textContent = subject.name;
         container.appendChild(subject_link);
         subject_link.appendChild(subject_card);
@@ -184,7 +184,7 @@ async function fetchanddisplayexam() {
         exam_card.className = "card";
         const exam_img = document.createElement("img");
         exam_img.src = exam.imagepath;
-        const exam_text = document.createElement("h6");
+        const exam_text = document.createElement("h3");
         exam_text.textContent = exam.name;
         container.appendChild(exam_link);
         exam_link.appendChild(exam_card);

@@ -96,6 +96,7 @@ dialog[open] {
   justify-content: center;
   border-radius: 15px;
   margin: 2rem;
+  padding: 30px;
   box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -106,8 +107,9 @@ dialog[open] {
   margin: 5px;
 }
 
-.card h6 {
-  color: #fff
+.card h3 {
+  color: #fff;
+  margin: 10px;
 }
 
 .card h4 {
