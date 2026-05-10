@@ -300,4 +300,67 @@ else if (isexam) {
 }
 else if (isannouncments) {
     fetchanddisplayannouncements();
+} else {
+    const container = document.getElementById("container");
+    const add_material_link = document.createElement("a");
+    add_material_link.href = "?material";
+    const add_material_div = document.createElement("div");
+    add_material_div.className = "card";
+    const add_material_image = document.createElement("img");
+    add_material_image.src = "/images/book.svg";
+    const add_material_text = document.createElement("h3");
+    add_material_text.textContent = "material";
+    const add_exam_link = document.createElement("a");
+    add_exam_link.href = "?exams";
+    const add_exam_div = document.createElement("div");
+    add_exam_div.className = "card";
+    const add_exam_image = document.createElement("img");
+    add_exam_image.src = "/images/exam.svg";
+    const add_exam_text = document.createElement("h3");
+    add_exam_text.textContent = "exams";
+    const add_profile_link = document.createElement("a");
+    add_profile_link.href = "?profile";
+    const add_profile_div = document.createElement("div");
+    add_profile_div.className = "card";
+    const add_profile_image = document.createElement("img");
+    add_profile_image.src = "/images/profile.svg";
+    const add_profile_text = document.createElement("h3");
+    add_profile_text.textContent = "profile";
+    const add_announcements_link = document.createElement("a");
+    add_announcements_link.href = "?announcements";
+    const add_announcements_div = document.createElement("div");
+    add_announcements_div.className = "card";
+    const add_announcements_image = document.createElement("img");
+    add_announcements_image.src = "/images/announcement.svg";
+    const add_announcements_text = document.createElement("h3");
+    add_announcements_text.textContent = "announcements";
+    const add_help_link = document.createElement("a");
+    add_help_link.href = "mailto:jammercraft.123@gmail.com";
+    const add_help_div = document.createElement("div");
+    add_help_div.className = "card";
+    const add_help_image = document.createElement("img");
+    add_help_image.src = "/images/contactus.svg";
+    const add_help_text = document.createElement("h3");
+    add_help_text.textContent = "contact us";
+    container.appendChild(add_material_link);
+    container.appendChild(add_exam_link);
+    container.appendChild(add_announcements_link);
+    container.appendChild(add_profile_link);
+    container.appendChild(add_help_link);
+    add_material_link.appendChild(add_material_div);
+    add_material_div.appendChild(add_material_image);
+    add_material_div.appendChild(add_material_text);
+    add_exam_link.appendChild(add_exam_div);
+    add_exam_div.appendChild(add_exam_image);
+    add_exam_div.appendChild(add_exam_text);
+    add_announcements_link.appendChild(add_announcements_div);
+    add_announcements_div.appendChild(add_announcements_image);
+    add_announcements_div.appendChild(add_announcements_text);
+    add_profile_link.appendChild(add_profile_div);
+    add_profile_div.appendChild(add_profile_image);
+    add_profile_div.appendChild(add_profile_text);
+    add_help_link.appendChild(add_help_div);
+    add_help_div.appendChild(add_help_image);
+    add_help_div.appendChild(add_help_text)
+
 }
