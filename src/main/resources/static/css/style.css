@@ -18,7 +18,7 @@ body h1 {
   align-items: center;
   flex-wrap: wrap;
   box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
-  min-width: 500px;
+  min-width: 475px;
 }
 
 .menu-bar a img {
