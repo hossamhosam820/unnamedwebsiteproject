@@ -86,6 +86,7 @@ dialog[open] {
   text-decoration: none;
 }
 
+
 .card {
   min-width: 400px;
   background-color: #333;
@@ -109,6 +110,57 @@ dialog[open] {
   color: #fff
 }
 
+.card h4 {
+  color: white;
+  margin: 75px;
+}
+
+.card form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card form input {
+  border-radius: 5px;
+  outline: none;
+  min-width: 100%;
+  min-height: 50px;
+  margin: 25px;
+}
+
+.card form button {
+  min-width: 100%;
+  margin-bottom: 25px;
+}
+
 .card:hover {
-  transform: scale(1.2, 1.2);
+  transform: scale(1.1, 1.1);
+}
+
+.textcard {
+  min-width: 90%;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  border-radius: 15px;
+  margin: 2rem;
+  padding: 30px;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.textcard h3 {
+  color: white;
+  margin: 10px;
+  padding: 0px;
+}
+
+.textcard h5,
+h6 {
+  color: #bababa;
+  margin: 0;
+  padding: 0;
 }

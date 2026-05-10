@@ -13,12 +13,14 @@ public class Exams {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     @Column(nullable = false, length = 40, unique = false)
     private String name;
     @Column(nullable = false, length = 500, unique = true)
     private String url;
     @Column(nullable = false, length = 40, unique = false)
     private String subject;
+    @Column(nullable = false, length = 100, unique = false)
+    private String imagepath;
 
 }

@@ -1,8 +1,5 @@
 package com.elhackarz.fehu2026.controller;
 
-import java.time.LocalDate;
-import java.time.Period;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -26,7 +23,7 @@ import com.elhackarz.fehu2026.repositories.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/auth")
 public class AuthenticationController {
@@ -55,16 +52,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/signup")
-    public RedirectView registerUser(@Valid @ModelAttribute SignupRequest signupRequest) {
-         int age = Period.between(
-            signupRequest.getBirthDate(),
-            LocalDate.now()
-    ).getYears();
-
-    if(age < 15 || age > 100){
-    return new RedirectView("/signup?INVALID_AGE");
-}
-
+    public RedirectView registerUser(@ModelAttribute SignupRequest signupRequest) {
         if (userRepository.existsByEmail(signupRequest.getEmail())) {
             return new RedirectView("/signup?USED");
         }
@@ -74,7 +62,7 @@ public class AuthenticationController {
         user.setEmail(signupRequest.getEmail());
         user.setPassword(passwordEncoder.encode(signupRequest.getPassword()));
         user.setUsername(signupRequest.getUsername());
-        user.setBirthDate(signupRequest.getBirthDate());
+        user.setBirthyear(signupRequest.getBirthyear());
         user.setRole("ROLE_USER");
         userRepository.save(user);
         return new RedirectView("/login?OK");
