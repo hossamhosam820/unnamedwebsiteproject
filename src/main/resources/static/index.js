@@ -302,6 +302,7 @@ else if (isannouncments) {
     fetchanddisplayannouncements();
 } else {
     const container = document.getElementById("container");
+    container.innerHTML = "";
     const add_material_link = document.createElement("a");
     add_material_link.href = "?material";
     const add_material_div = document.createElement("div");
